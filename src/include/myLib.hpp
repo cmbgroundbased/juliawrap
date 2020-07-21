@@ -9,6 +9,7 @@ public:
 
     double a;
     double b;
+    double e;
 
 private:
     double c;
