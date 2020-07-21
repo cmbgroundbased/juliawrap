@@ -14,6 +14,7 @@ public:
 private:
     double c;
     double d;
+    double f;
 };
 
 }
