@@ -17,11 +17,18 @@ target_include_directories(${JL_MODULE} PUBLIC
     $<INSTALL_INTERFACE:include>
 )
 
-
 target_link_libraries(${JL_MODULE} myLib JlCxx::cxxwrap_julia)
 
-install(TARGETS
-  testlib
+install(
+TARGETS ${JL_MODULE}
 LIBRARY DESTINATION lib
 ARCHIVE DESTINATION lib
-RUNTIME DESTINATION lib)
+RUNTIME DESTINATION lib
+)
+
+INSTALL(
+TARGET load_and_test_module.jl
+LIBRARY DESTINATION lib
+ARCHIVE DESTINATION lib
+RUNTIME DESTINATION lib
+)
