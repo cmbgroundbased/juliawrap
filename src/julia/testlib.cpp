@@ -3,9 +3,9 @@
 
 using namespace myLib;
 
-JLCXX_MODULE define_types_module(jlcxx::Module& types)
+JLCXX_MODULE define_julia_module(jlcxx::Module& mod)
 {
-  types.add_type<osservazione>("osservazione")
+  mod.add_type<osservazione>("osservazione")
     .constructor<>()
     .method("sum", &osservazione::sum)
     .method("diff", &osservazione::diff);
